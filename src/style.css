@@ -1,0 +1,76 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--Very-Light-Gray);
+  padding-inline : 10%;
+  overflow-x: hidden;
+}
+body > h1 {
+  text-align: center;
+}
+body > h1:first-child {
+  font-weight: 200 !important;
+  color: var(--Grayish-Blue);
+}
+body > h1:nth-child(2) {
+  color: var(--Very-Dark-Blue);
+}
+body > p {
+  text-align: center;
+  padding-inline: 25%;
+  color: var(--Grayish-Blue);
+  margin-block: 5px 15px;
+}
+body > div {
+  display: grid;
+  justify-content: center;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(4, 100px);
+}
+body > div > * {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 0px var(--Very-Dark-Blue);
+  padding: 10px;
+}
+body > div > .Supervisor {
+  grid-area: 2 / 1 / 4 / 2;
+  border-top: solid 5px var(--Cyan);
+}
+body > div > .team {
+  grid-area: 1 / 2 / 3 / 3;
+  border-top: var(--Red) 5px solid;
+}
+body > div > .Calculator {
+  grid-area: 2 / 3 / 4 / 4;
+  border-top: var(--Blue) solid 5px;
+}
+body > div > .karma {
+  grid-area: 3 / 2 / 5 / 3;
+  border-top: var(--Orange) solid 5px;
+}
+body > div > * > p {
+  color: var(--Grayish-Blue);
+}
+body > div > * > img {
+    width: 50px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
